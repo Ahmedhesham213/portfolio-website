@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Ahmed Hesham" />
+  <meta name="description" content="Free web tutorials" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Hesham</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./images/img-titel.png">
+  <link rel="apple-touch-icon" href="./images/img-titel.png">
+
+  <!-- Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="Style/style.css" />
+</head>
+
+<body>
+  <video class="video-loop" autoplay loop muted>
+    <source src="/Video/video-loop.mp4" type="video/mp4" />
+  </video>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header section--with-bg">
+      <input id="menu"  class="burgr-menu__checkbox" type="checkbox" />
+
+      <label class="burger-menu" for="menu" >
+        <div class="burgr-menu__bar"></div>
+        <div class="burgr-menu__bar"></div>
+        <div class="burgr-menu__bar"></div>
+      </label>
+      <nav class="navigation" aria-label="Main Navigation">
+        <ul class="navigation__list">
+          <li><a href="#bio" class="navigation__link navigation__bio">Bio</a></li>
+          <li><a href="#skills" class="navigation__link navigation__skills">Skills</a></li>
+          <li><a href="#media" class="navigation__link navigation__media">Media</a></li>
+          <li><a href="#projects" class="navigation__link navigation__projects">Projects</a></li>
+          <li><a href="#clients" class="navigation__link navigation__clients">My Clients</a></li>
+          <li><a href="#contact" class="navigation__link navigation__contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme Toggle -->
+      <div class="toggle">
+        <h3 class="toggle__title">Switch Theme</h3>
+        <input type="checkbox" id="toggle" class="toggle__checkbox" />
+        <label for="toggle" class="toggle__label"></label>
+      </div>
+    </header>
+
+    <!-- Bio Section -->
+    <section id="bio" class="bio section">
+      <div class="bio__data">
+        <h1 class="bio__heading">Hi There, I’M A Passionate Front-End Developer</h1>
+        <p class="bio__objective">
+          My name is <span class="bio__name">Ahmed Hesham</span>,
+          a Front-End Developer passionate about creating interactive
+          and user-friendly web experiences. Find me on
+          <a href="https://github.com/Ahmedhesham213" class="bio__github" target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+          and
+          <a href="https://www.linkedin.com/in/ahmed-hesham74" class="bio__linkedin" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>.
+        </p>
+        <a href="#contact" class="bio__links say-hi-link">Say Hi</a>
+        <a href="#" class="bio__links say-out-link">Download CV <span class="boi__arrow">↓</span> </a>
+      </div>
+      <div class="bio__pic--content">
+        <img class="bio__pic" src="./images/photo.png" alt="image of ahmed hesham">
+      </div>
+    </section>
+
+    <section id="skills" class="skills section section--with-bg">
+      <h2 class="h2-heading">Skills</h2>
+      <ul class="skills__list">
+        <li class="skills__item">
+          <h2 class="skills__titel">HTML</h2>
+          <i class="fa-brands fa-html5"></i>
+          <span class="skills__years">2 years</span>
+        </li>
+        <li class="skills__item">
+          <h2 class="skills__titel">CSS</h2>
+          <i class="fa-brands fa-css3-alt"></i>
+          <span class="skills__years">1 year</span>
+        </li>
+        <li class="skills__item">
+          <h2 class="skills__titel">JavaScript</h2>
+          <i class="fa-brands fa-js"></i>
+          <span class="skills__years">1 year</span>
+        </li>
+        <li class="skills__item">
+          <h2 class="skills__titel">Python</h2>
+          <i class="fa-brands fa-python"></i>
+          <span class="skills__years">1 year</span>
+        </li>
+        <li class="skills__item">
+          <h2 class="skills__titel">C++</h2>
+          <i class="devicon-cplusplus-plain colored"></i>
+          <span class="skills__years">2 years</span>
+        </li>
+        <li class="skills__item">
+          <h2 class="skills__titel">Git</h2>
+          <i class="fa-brands fa-git-alt"></i>
+          <span class="skills__years">1 year</span>
+        </li>
+        <li class="skills__item">
+          <h2 class="skills__titel">VS Code</h2>
+          <i class="devicon-vscode-plain colored"></i>
+          <span class="skills__years">2 years</span>
+        </li>
+        <li class="skills__item">
+          <h2 class="skills__titel">Problem Solving</h2>
+          <i class="fa-solid fa-lightbulb"></i>
+          <span class="skills__years">1 year</span>
+        </li>
+        <li class="skills__item">
+          <h2 class="skills__titel">GitHub</h2>
+          <i class="fa-brands fa-github" style="color:#333;"></i>
+          <span class="skills__years">2 years</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="media" class="media section">
+      <video class="media__video" poster="./images/photo-video1.jpg" controls>
+        <source src="/Video/Media.mp4" type="video/ogg">
+        <source src="/Video/Media.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section id="projects" class="project section section--with-bg">
+      <h2 class="h2-heading">MY FEATURED <br> PROJECTS</h2>
+
+      <div class="progects__main">
+        <div class="progects__data">
+          <img class="progects__img" src="./images/project-1.jpg" alt="Quran Tab Extension">
+          <h3 class="h3-heading">Quran Tab Extension</h3>
+          <p class="progects__description">Quran Tab is an Islamic new tab page will keep you inspired by a verse from
+            the Quran every time you open a new tab, helping you achieve your "Khatma" and stay connected with the words
+            of Allah.</p>
+          <a href="https://bit.ly/qt-chrome" class="projects__link" target="_blank">Chrome Link <i
+              class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="https://bit.ly/qt-edge" class="projects__link" target="_blank">Edge Link <i
+              class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+
+        <div class="progects__data">
+          <img class="progects__img" src="./images/preview.jpg" alt="ClipboardX Modern Landing Page">
+          <h3 class="h3-heading">ClipboardX – Modern Landing Page</h3>
+          <p class="progects__description">A fully responsive landing page built with HTML5 and CSS3 using a
+            mobile-first approach. Designed with
+            Flexbox and Grid, featuring modern UI, clean layout, and interactive hover states.</p>
+          <a href="https://hilarious-bubblegum-95a6272.netlify.app/" class="projects__link" target="_blank">Live Demo <i
+              class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="https://github.com/Ahmedhesham213/clipboard-landing-page-master" class="projects__link"
+            target="_blank">Repository <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="progects__button"><a class="projects__all" target="_blank"
+            href="https://github.com/Ahmedhesham213">All Projects<i class="fa-brands fa-github"></i></a> </div>
+      </div>
+    </section>
+
+    <section id="clients" class="clients section section--with-bg">
+      <h2 class="h2-heading">WHAT MY <br>CLIENTS SAYS</h2>
+      <div class="clients__opinions">
+        <div class="clients__wrapper">
+          <p class="clients__icon">"</p>
+          <p class="clients__opinion">
+            Ahmed Hesham has the exceptional ability to <span class="highlight">turn complex problems into clean and
+              effective solutions</span>. His frontend skills and eye for design made our project stand out. I highly
+            recommend him.
+          </p>
+        </div>
+
+        <div class="clients__wrapper">
+          <p class="clients__icon">"</p>
+          <p class="clients__opinion">
+            Working with Ahmed was inspiring. He always brings <span class="highlight">creativity and structure at the
+              same time</span>, which is rare to find. His excellent communication and commitment made the whole
+            process smooth.
+          </p>
+        </div>
+
+        <div class="clients__wrapper">
+          <p class="clients__icon">"</p>
+          <p class="clients__opinion">
+            Ahmed is the kind of teammate who <span class="highlight">lifts the whole group</span>. Always willing to
+            help, share knowledge, and learn something new. A true asset to any team he joins.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="contact__contener">
+        <p class="contact__description">
+          Feel free to reach out to me any time. I prefer to talk over email, especially since we may be a few time
+          zones away.
+        </p>
+
+        <a class="contact__email" href="mailto:ahmed.hesham.a.ibrahim@gmail.com"
+          target="_blank">ahmed.hesham.a.ibrahim@gmail.com</a>
+        <div class="contact__socials">
+          <a href="https://www.facebook.com/ahmed.hesham.201707?locale=ar_AR" class="contact__social" target="_blank"
+            aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.instagram.com/ahmed__hesham74" class="contact__social" target="_blank"
+            aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://github.com/Ahmedhesham213" class="contact__social" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/ahmed-hesham74" class="contact__social" target="_blank"
+            aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div class="contact__formContact">
+        <h2 class="h2-heading">
+          Let’s Work <br />
+          Together!
+        </h2>
+
+        <form action="results.html">
+          <div class="contact__inputs">
+            <input class="contact__input" type="text" placeholder="Full Name" name="Full Name" required />
+            <input class="contact__input" type="email" placeholder="Email" name="Email" required />
+          </div>
+          <textarea class="contact__input contact__textarea" name="description" id="description" rows="1"
+            placeholder="Your Message"></textarea>
+          <input class="contact__boutton" type="submit" value="Send Message">
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">©2024 by Ahmed Hesham.</footer>
+  </div>
+</body>
+
+</html>

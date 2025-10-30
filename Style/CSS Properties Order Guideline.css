@@ -1,0 +1,39 @@
+.selector {
+  /* 1. Positioning */
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  /* 2. Display & Box Model */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 1rem;
+
+  /* 3. Typography */
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+
+  /* 4. Visuals (Background, Border, Shadow) */
+  background-color: #0077ff;
+  border: 1px solid #0055cc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* 5. Animation & Transformation */
+  transition: all 0.3s ease;
+  transform: scale(1);
+  animation: fade-in 0.5s ease-in-out;
+}
