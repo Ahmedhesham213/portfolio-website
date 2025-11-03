@@ -1,0 +1,39 @@
+.clients__opinions {
+  display: grid;
+  grid-template-columns: repeat(3, 34rem);
+  justify-content: center;
+}
+
+.clients__wrapper {
+  background-color: var(--color-grey);
+  padding: 2rem;
+  width: 30rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.clients__wrapper:hover {
+  transform: translateY(-9px);
+}
+
+.clients__icon {
+  font-size: var(--font-size-40);
+  color: var(--color-blue);
+  line-height: 0.5;
+  margin-bottom: 0.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.clients__opinion {
+  font-size: var(--font-size-18);
+  line-height: 1.8;
+}
+
+#clients {
+  margin-top: -11rem;
+}
+
+#clients .h2-heading {
+  margin-left: 8rem;
+}
