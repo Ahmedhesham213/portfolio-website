@@ -294,6 +294,7 @@ body,
 }
 .bio .say-out-link {
   padding: 0.7rem 0;
+  margin-right: .5rem;
   margin-inline-start: 1.4rem;
 }
 @keyframes jump {
