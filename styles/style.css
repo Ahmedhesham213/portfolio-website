@@ -18,8 +18,8 @@
   --color-box-img: var(--color-black);
   --color-link-bg: var(--color-black);
   --color-input-border: var(--color-black);
-  --font-family-raleway: "Raleway", sans-serif;
-  --font-family-poppins: "Poppins", sans-serif;
+  --font-family-raleway: 'Raleway', sans-serif;
+  --font-family-poppins: 'Poppins', sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
@@ -75,7 +75,7 @@ html {
 }
 
 body,
-[type="submit"] {
+[type='submit'] {
   font-size: 1.6rem;
   font-family: var(--font-family-raleway);
   background-color: var(--color-background);
@@ -114,7 +114,7 @@ body,
 }
 
 .section--with-bg::before {
-  content: "";
+  content: '';
   position: absolute;
   height: 100%;
   width: 100vw;
@@ -152,7 +152,7 @@ body,
 }
 
 .header::before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   height: 100%;
@@ -182,7 +182,8 @@ body,
   font-weight: var(--font-weight-medium);
 }
 
-.navigation__link:hover,
+.navigation__link
+:hover,
 .navigation__link:active {
   text-decoration: underline;
   color: var(--color-blue);
@@ -232,7 +233,7 @@ body,
 }
 
 .toggle__label::after {
-  content: "";
+  content: '';
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 50%;
@@ -269,6 +270,9 @@ body,
 .bio__name {
   font-weight: var(--font-weight-semi-bold);
 }
+.bio__role {
+  color: red;
+}
 .bio__university {
   color: var(--color-green);
 }
@@ -281,6 +285,7 @@ body,
 .bio__links {
   font-size: var(--font-size-24);
   font-weight: var(--font-weight-semi-bold);
+  padding-left: 20px;
   text-decoration: none;
 }
 .bio .say-hi-link {
@@ -321,7 +326,7 @@ body,
   justify-self: end;
 }
 .bio__pic--content::before {
-  content: "";
+  content: '';
   position: absolute;
   background-color: var(--color-box-img);
   width: 100%;
@@ -333,6 +338,23 @@ body,
 .bio__pic {
   width: 42.7rem;
   border-radius: 1rem;
+}
+.skills__item {
+  cursor: pointer;
+  padding-bottom: 6px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.skills__item.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 4px;
+  background: #00a8ff; 
+  border-radius: 4px;
 }
 
 .skills__list {
@@ -597,7 +619,7 @@ body,
   margin-top: 3.4rem;
 }
 .contact form:invalid::after {
-  content: "*";
+  content: '*';
   font-size: var(--font-size-38);
   color: var(--color-red);
 }
@@ -624,7 +646,7 @@ html:has(.toggle__checkbox:checked) {
 }
 @media (max-width: 1000px) {
   html {
-    font-size: 7px;
+    font-size: 8px;
   }
 }
 @media (max-width: 800px) {
@@ -663,8 +685,8 @@ html:has(.toggle__checkbox:checked) {
 }
 @media (max-width: 500px) {
   html {
-    scroll-padding-top: 15rem;
     font-size: 7px;
+    scroll-padding-top: 15rem;
   }
   .header {
     padding: 0;
@@ -764,7 +786,7 @@ html:has(.toggle__checkbox:checked) {
 }
 @media (max-width: 400px) {
   html {
-    font-size: 6px;
+    font-size: 6.8px;
     scroll-padding-top: 12rem;
   }
   .bio__pic {
