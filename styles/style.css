@@ -287,6 +287,7 @@ body,
   background-color: var(--color-link-bg);
   color: var(--color-white);
   padding: 0.7rem 4.7rem;
+    margin-right: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .bio .say-hi-link:hover {
@@ -294,7 +295,6 @@ body,
 }
 .bio .say-out-link {
   padding: 0.7rem 0;
-  margin-right: .5rem;
   margin-inline-start: 1.4rem;
 }
 @keyframes jump {
