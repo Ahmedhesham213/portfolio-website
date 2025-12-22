@@ -668,6 +668,7 @@ html:has(.toggle__checkbox:checked) {
     font-size: 7px;
   }
   .header {
+font-size: 7px;
     padding: 0;
   }
   .header::before {
