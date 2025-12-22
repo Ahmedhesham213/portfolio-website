@@ -355,7 +355,7 @@ body,
 }
 
 #skills .skills__list .skills__item:hover {
-  transform: translateY(-0.313rem);
+  transform: translateY(-1rem);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
