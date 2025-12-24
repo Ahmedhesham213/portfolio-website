@@ -692,6 +692,7 @@ html:has(.toggle__checkbox:checked) {
     scroll-padding-top: 15rem;
   }
   .header {
+font-size: 7px;
     padding: 0;
   }
   .header::before {
