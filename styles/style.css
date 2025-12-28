@@ -167,7 +167,7 @@ body,
 .navigation {
   transition: var(--transition-timing);
   background-color: var(--color-background);
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .navigation__list {
