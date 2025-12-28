@@ -148,7 +148,6 @@ body,
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  background: var(--color-background);
   z-index: 1;
 }
 
@@ -159,14 +158,13 @@ body,
   height: 100%;
   width: 100vw;
   border-bottom: 0.1rem solid var(--color-input-border);
-  background: rgba(255, 255, 255, 0.453);
+  background: rgba(255, 255, 255, 0.312);
   backdrop-filter: saturate(140%) blur(10px);
   top: 0;
 }
 
 .navigation {
   transition: var(--transition-timing);
-  background-color: var(--color-background);
   font-size: 18px;
 }
 
