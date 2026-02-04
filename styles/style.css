@@ -659,12 +659,6 @@ body,
   margin-top: 3.4rem;
 }
 
-.contact form:invalid::after {
-  content: "*";
-  font-size: var(--font-size-38);
-  color: var(--color-red);
-}
-
 .footer {
   padding: 1rem 0;
   font-size: var(--font-size-15);
