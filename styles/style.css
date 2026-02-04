@@ -148,7 +148,6 @@ body,
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  background: var(--color-background);
   z-index: 1;
 }
 
@@ -159,14 +158,14 @@ body,
   height: 100%;
   width: 100vw;
   border-bottom: 0.1rem solid var(--color-input-border);
-  background-color: var(--color-background);
-  top: 0.1rem;
+  background: rgba(255, 255, 255, 0.312);
+  backdrop-filter: saturate(140%) blur(10px);
+  top: 0;
 }
 
 .navigation {
   transition: var(--transition-timing);
-  background-color: var(--color-background);
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .navigation__list {
@@ -640,6 +639,11 @@ html:has(.toggle__checkbox:checked) {
   --color-link-bg: var(--color-lead);
   --color-grey: #080808;
   --color-input-border: var(--color-white);
+}
+
+html:has(.toggle__checkbox:checked) .header::before  {
+  background: rgba(0, 0, 0, 0.286);
+  backdrop-filter: saturate(140%) blur(10px);
 }
 
 @media (max-width: 1200px) {
