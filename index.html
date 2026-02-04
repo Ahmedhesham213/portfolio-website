@@ -98,53 +98,51 @@
     </section>
 
     <section id="skills" class="skills section section--with-bg">
-      <h2 data-aos="zoom-in-up" data-aos-duration="2000" class="h2-heading">
+      <h2 data-aos="zoom-in-up" data-aos-duration="1000" class="h2-heading">
         Skills
       </h2>
-      <ul class="skills__list">
-        <li data-name="HTML" class="skills__item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">
+      <ul class="skills__list" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">
+        <li data-name="HTML" class="skills__item">
           <h2 class="skills__titel">HTML</h2>
           <i class="fa-brands fa-html5"></i>
           <span class="skills__years">2 years</span>
         </li>
-        <li data-name="CSS" class="skills__item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+        <li data-name="CSS" class="skills__item">
           <h2 class="skills__titel">CSS</h2>
           <i class="fa-brands fa-css3-alt"></i>
           <span class="skills__years">1 year</span>
         </li>
-        <li data-name="JavaScript" class="skills__item" data-aos="fade-up" data-aos-duration="1500"
-          data-aos-delay="200">
+        <li data-name="JavaScript" class="skills__item">
           <h2 class="skills__titel">JavaScript</h2>
           <i class="fa-brands fa-js"></i>
           <span class="skills__years">1 year</span>
         </li>
-        <li data-name="Python" class="skills__item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+        <li data-name="Python" class="skills__item">
           <h2 class="skills__titel">Python</h2>
           <i class="fa-brands fa-python"></i>
           <span class="skills__years">1 year</span>
         </li>
-        <li data-name="C++" class="skills__item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+        <li data-name="C++" class="skills__item">
           <h2 class="skills__titel">C++</h2>
           <i class="devicon-cplusplus-plain colored"></i>
           <span class="skills__years">2 years</span>
         </li>
-        <li data-name="Git" class="skills__item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+        <li data-name="Git" class="skills__item">
           <h2 class="skills__titel">Git</h2>
           <i class="fa-brands fa-git-alt"></i>
           <span class="skills__years">1 year</span>
         </li>
-        <li data-name="VS Code" class="skills__item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+        <li data-name="VS Code" class="skills__item">
           <h2 class="skills__titel">VS Code</h2>
           <i class="devicon-vscode-plain colored"></i>
           <span class="skills__years">2 years</span>
         </li>
-        <li data-name="Problem Solving" class="skills__item" data-aos="fade-up" data-aos-duration="1000"
-          data-aos-delay="700">
+        <li data-name="Problem Solving" class="skills__item">
           <h2 class="skills__titel">Problem Solving</h2>
           <i class="fa-solid fa-lightbulb"></i>
           <span class="skills__years">1 year</span>
         </li>
-        <li data-name="GitHub" class="skills__item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+        <li data-name="GitHub" class="skills__item">
           <h2 class="skills__titel">GitHub</h2>
           <i class="fa-brands fa-github" style="color: #333"></i>
           <span class="skills__years">2 years</span>
@@ -307,24 +305,21 @@
           Together!
         </h2>
 
-        <form id="contact-form" action="https://formspree.io/f/mojlgzvl" method="POST">
-
+        <form id="contact-form" method="POST">
           <div class="contact__inputs">
             <input class="contact__input" type="text" name="name" placeholder="Full Name" required />
-
             <input class="contact__input" type="email" name="email" placeholder="Email Address" required />
           </div>
 
           <textarea class="contact__input contact__textarea" name="message" rows="4" placeholder="Your Message"
             required></textarea>
-
           <input class="contact__boutton" type="submit" value="Send Message" />
           <input type="hidden" name="_replyto" value="ahmed.hesham.a.ibrahim@gmail.com">
           <input type="hidden" name="_subject" value="New Message From Website">
-
         </form>
-        <div id="success-message" style="display:none; color:green; margin-top:10px;">
-          تم إرسال الرسالة بنجاح ✔
+
+        <div id="success-message">
+          Message sent successfully ✔
         </div>
 
       </div>
@@ -340,6 +335,7 @@
       once: true,
     });
   </script>
+  <script src="form.js"></script>
 </body>
 
 </html>

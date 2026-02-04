@@ -9,14 +9,16 @@ form.addEventListener("submit", function (e) {
   fetch("https://formspree.io/f/mojlgzvl", {
     method: "POST",
     body: formData,
-    headers: {
-      Accept: "application/json",
-    },
+    headers: { Accept: "application/json" },
   })
     .then((response) => {
       if (response.ok) {
         successMessage.style.display = "block";
         form.reset();
+
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 3000);
       } else {
         alert("Something went wrong, please try again.");
       }
