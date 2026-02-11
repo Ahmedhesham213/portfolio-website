@@ -451,6 +451,10 @@ body,
   color: #ffb400;
 }
 
+.skills__item .fa-react {
+  color: #61dbfb;
+}
+
 .media {
   align-items: center;
   justify-content: center;
