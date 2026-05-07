@@ -109,14 +109,12 @@ html {
   gap: 2rem;
 }
 
-/* Left side wrapper for burger + logo */
 .header-left {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-/* Burger menu - next to logo */
 .burger-menu {
   display: none;
   flex-direction: column;
@@ -231,6 +229,7 @@ html {
 .theme-toggle__checkbox:checked + .theme-toggle__label::after {
   transform: translateX(2.4rem);
   content: "🌙";
+  background: var(--color-gray-800);
 }
 
 .theme-toggle__checkbox {
