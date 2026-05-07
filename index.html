@@ -4,364 +4,296 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="author" content="Ahmed Hesham" />
-  <meta name="description" content="Free web tutorials" />
+  <meta name="description" content="Front-End Developer Portfolio | Ahmed Hesham" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmed Hesham</title>
+  <title>Ahmed Hesham | Front-End Developer</title>
   <link rel="icon" type="image/png" href="./images/img-titel.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/styles/style.css">
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="styles/style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
-  <video class="video-loop" autoplay loop muted>
+  <video class="video-loop" autoplay loop muted playsinline>
     <source src="/Video/video-loop.mp4" type="video/mp4" />
   </video>
 
-  <div class="container">
-    <header class="header section--with-bg">
-      <label class="burger-menu" for="menu">
-        <div class="burgr-menu__bar"></div>
-        <div class="burgr-menu__bar"></div>
-        <div class="burgr-menu__bar"></div>
-      </label>
+  <header class="header">
+    <div class="header__inner">
+      <div class="header-left">
+        <label class="burger-menu" for="menu">
+          <div class="burgr-menu__bar"></div>
+          <div class="burgr-menu__bar"></div>
+          <div class="burgr-menu__bar"></div>
+        </label>
+      </div>
 
       <input id="menu" class="burgr-menu__checkbox" type="checkbox" />
 
-      <nav class="navigation" aria-label="Main Navigation">
+      <nav class="navigation">
         <ul class="navigation__list">
-          <li>
-            <a data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0" href="#bio"
-              class="navigation__link navigation__bio">Bio</a>
-          </li>
-          <li>
-            <a data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" href="#skills"
-              class="navigation__link navigation__skills">Skills</a>
-          </li>
-          <li>
-            <a data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200" href="#media"
-              class="navigation__link navigation__media">Media</a>
-          </li>
-          <li>
-            <a data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300" href="#projects"
-              class="navigation__link navigation__projects">Projects</a>
-          </li>
-          <li>
-            <a data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400" href="#clients"
-              class="navigation__link navigation__clients">My Clients</a>
-          </li>
-          <li>
-            <a data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500" href="#contact"
-              class="navigation__link navigation__contact">Contact</a>
-          </li>
+          <li><a href="#bio" class="navigation__link" data-aos="fade-down">Home</a></li>
+          <li><a href="#skills" class="navigation__link" data-aos="fade-down" data-aos-delay="100">Skills</a></li>
+          <li><a href="#projects" class="navigation__link" data-aos="fade-down" data-aos-delay="200">Projects</a></li>
+          <li><a href="#clients" class="navigation__link" data-aos="fade-down" data-aos-delay="300">Clients</a></li>
+          <li><a href="#contact" class="navigation__link" data-aos="fade-down" data-aos-delay="400">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="toggle" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
-        <h3 class="toggle__title">Switch Theme</h3>
-        <input type="checkbox" id="toggle" class="toggle__checkbox" />
-        <label for="toggle" class="toggle__label"></label>
+      <div class="theme-toggle">
+        <input type="checkbox" id="themeToggle" class="theme-toggle__checkbox" />
+        <label for="themeToggle" class="theme-toggle__label"></label>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <section id="bio" class="bio section">
-      <div class="bio__data">
-        <h1 data-aos-duration="1000" data-aos="fade-right" class="bio__heading">
-          Hi There, I’M A Passionate Front-End Developer
-        </h1>
-        <p data-aos-duration="1200" data-aos="fade-right" data-aos-delay="200" class="bio__objective">
-          My name is <span class="bio__name">Ahmed Hesham</span>, a Front-End
-          Developer passionate about creating interactive and user-friendly
-          web experiences. Find me on
-          <a href="https://github.com/Ahmedhesham213" class="bio__github" target="_blank"
-            rel="noopener noreferrer">GitHub</a>
-          and
-          <a href="https://www.linkedin.com/in/ahmed-hesham74" class="bio__linkedin" target="_blank"
-            rel="noopener noreferrer">LinkedIn</a>.
-        </p>
-        <a data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400" href="#contact"
-          class="bio__links say-hi-link">Say Hi</a>
-        <a data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" class="bio__links find-out-link"
-          href="./assets/CV Ahmed hesham.pdf">
-          Download CV <span class="bio__arrow">↓</span>
-        </a>
-      </div>
-      <div class="bio__pic--content" data-aos="fade-left" data-aos-duration="1500">
-        <img class="bio__pic" src="./images/photo.png" alt="image of ahmed hesham" />
-      </div>
-    </section>
-
-    <section id="skills" class="skills section section--with-bg">
-      <h2 data-aos="zoom-in-up" data-aos-duration="1000" class="h2-heading">
-        Skills
-      </h2>
-      <ul class="skills__list" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">
-        <li data-name="HTML" class="skills__item">
-          <h2 class="skills__titel">HTML</h2>
-          <i class="fa-brands fa-html5"></i>
-          <span class="skills__years">2 years</span>
-        </li>
-        <li data-name="CSS" class="skills__item">
-          <h2 class="skills__titel">CSS</h2>
-          <i class="fa-brands fa-css3-alt"></i>
-          <span class="skills__years">1 year</span>
-        </li>
-        <li data-name="JavaScript" class="skills__item">
-          <h2 class="skills__titel">JavaScript</h2>
-          <i class="fa-brands fa-js"></i>
-          <span class="skills__years">1 year</span>
-        </li>
-        <li data-name="Tailwind" class="skills__item">
-          <h2 class="skills__titel">Tailwind</h2>
-          <i class="devicon-tailwindcss-plain colored"></i>
-          <span class="skills__years">1 year</span>
-        </li>
-        <li data-name="React" class="skills__item">
-          <h2 class="skills__titel">React</h2>
-          <i class="fa-brands fa-react"></i>
-          <span class="skills__years">1 year</span>
-        </li>
-        <li data-name="Vite" class="skills__item">
-          <h2 class="skills__titel">Vite</h2>
-          <i class="fa-solid fa-bolt" style="color:#646CFF;"></i>
-          <span class="skills__years">1 years</span>
-        </li>
-        <li data-name="TypeScript" class="skills__item">
-          <h2 class="skills__titel">TypeScript</h2>
-          <i class="fa-brands fa-js" style="color: #2d09d5;"></i>
-          <span class="skills__years">1 year</span>
-        </li>
-        <li data-name="Python" class="skills__item">
-          <h2 class="skills__titel">Python</h2>
-          <i class="fa-brands fa-python"></i>
-          <span class="skills__years">1 year</span>
-        </li>
-        <li data-name="C++" class="skills__item">
-          <h2 class="skills__titel">C++</h2>
-          <i class="devicon-cplusplus-plain colored"></i>
-          <span class="skills__years">2 years</span>
-        </li>
-        <li data-name="Git" class="skills__item">
-          <h2 class="skills__titel">Git</h2>
-          <i class="fa-brands fa-git-alt"></i>
-          <span class="skills__years">1 year</span>
-        </li>
-        <li data-name="VS Code" class="skills__item">
-          <h2 class="skills__titel">VS Code</h2>
-          <i class="devicon-vscode-plain colored"></i>
-          <span class="skills__years">2 years</span>
-        </li>
-        <li data-name="Problem Solving" class="skills__item">
-          <h2 class="skills__titel">Problem Solving</h2>
-          <i class="fa-solid fa-lightbulb"></i>
-          <span class="skills__years">1 year</span>
-        </li>
-        <li data-name="GitHub" class="skills__item">
-          <h2 class="skills__titel">GitHub</h2>
-          <i class="fa-brands fa-github" style="color: #333"></i>
-          <span class="skills__years">2 years</span>
-        </li>
-      </ul>
-    </section>
-
-    <section id="media" class="media section">
-      <video data-aos="zoom-in" data-aos-duration="1200" class="media__video" poster="./images/photo-video1.jpg"
-        controls>
-        <source src="/Video/Media.mp4" type="video/ogg" />
-        <source src="/Video/Media.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </section>
-
-    <section id="projects" class="project section section--with-bg">
-      <h2 class="h2-heading" data-aos="zoom-in-up" data-aos-duration="1000">
-        MY FEATURED <br />
-        PROJECTS
-      </h2>
-
-      <div class="progects__main">
-        <div class="progects__data" data-aos="fade-up-right" data-aos-duration="1200">
-          <img class="progects__img" src="./images/suez-canal.png" alt="ClipboardX Modern Landing Page" />
-          <h3 class="h3-heading">Suez Canal Explorer</h3>
-          <p class="progects__description">
-            A modern, responsive website about the Suez Canal, providing
-            real-time travel updates, weather information, and detailed
-            insights about this vital maritime route. Built with HTML, CSS,
-            JavaScript, and interactive animations, the site offers an
-            engaging and informative experience for users.
-          </p>
-          <a href="https://suez-canal.netlify.app/" class="projects__link" target="_blank">Live Demo <i
-              class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          <a href="https://github.com/Ahmedhesham213/suez-canal" class="projects__link" target="_blank">Repository <i
-              class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  <main>
+    <div class="container">
+      <!-- Bio Section -->
+      <section id="bio" class="section">
+        <div class="bio">
+          <div data-aos="fade-right" data-aos-duration="1000">
+            <h1 class="bio__heading">Hi There, I'm <span>Ahmed Hesham</span><br>Front-End Developer</h1>
+            <p class="bio__objective">I craft engaging and responsive web experiences with modern technologies.
+              Passionate about clean code and beautiful design. Find me on <a href="https://github.com/Ahmedhesham213"
+                target="_blank" style="color: var(--color-primary)">GitHub</a> and <a
+                href="https://www.linkedin.com/in/ahmed-hesham74" target="_blank"
+                style="color: var(--color-primary)">LinkedIn</a>.</p>
+            <div class="bio__links-group">
+              <a href="#contact" class="btn btn-primary">Say Hi 👋</a>
+              <a href="./assets/MyCV.pdf" class="btn btn-outline">Download CV ↓</a>
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="1000">
+            <img class="bio__pic" src="./images/photo.png" alt="Ahmed Hesham" />
+          </div>
         </div>
+      </section>
 
-        <div class="progects__data" data-aos="fade-up-left" data-aos-duration="1200">
-          <img class="progects__img" src="./images/previewVPN.jpg" alt="ClipboardX Modern Landing Page" />
-          <h3 class="h3-heading">LaslesVPN Landing Page</h3>
-          <p class="progects__description">
-            A fully responsive LaslesVPN landing page built with clean,
-            scalable Sass architecture. The project delivers a pixel-accurate
-            Figma conversion, reusable components, and optimized layout
-            structure — showcasing strong skills in UI development and
-            maintainable front-end coding.
-          </p>
-          <a href="https://laslesvpnlanding-page.netlify.app/" class="projects__link" target="_blank">Live Demo <i
-              class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          <a href="https://github.com/Ahmedhesham213/LaslesVPN-Landing-Page" class="projects__link"
-            target="_blank">Repository <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      <!-- Skills Section -->
+      <section id="skills" class="section section--alt">
+        <h2 class="section-title" data-aos="zoom-in">Skills & Technologies</h2>
+        <div class="skills__grid">
+          <div class="skills__item" data-aos="flip-left" data-aos-duration="600"><i class="fa-brands fa-html5"
+              style="color:#e34c26;"></i>
+            <h3 class="skills__titel">HTML5</h3><span class="skills__years">2 years</span>
+          </div>
+          <div class="skills__item" data-aos="flip-left" data-aos-duration="600" data-aos-delay="50"><i
+              class="fa-brands fa-css3-alt" style="color:#2965f1;"></i>
+            <h3 class="skills__titel">CSS3</h3><span class="skills__years">2 years</span>
+          </div>
+          <div class="skills__item" data-aos="flip-left" data-aos-duration="600" data-aos-delay="100"><i
+              class="fa-brands fa-js" style="color:#f7df1e;"></i>
+            <h3 class="skills__titel">JavaScript</h3><span class="skills__years">1.5 years</span>
+          </div>
+          <div class="skills__item" data-aos="flip-left" data-aos-duration="600" data-aos-delay="150"><i
+              class="fa-brands fa-react" style="color:#61dafb;"></i>
+            <h3 class="skills__titel">React</h3><span class="skills__years">1 year</span>
+          </div>
+          <div class="skills__item" data-aos="flip-left" data-aos-duration="600" data-aos-delay="200"><i
+              class="devicon-tailwindcss-plain colored"></i>
+            <h3 class="skills__titel">Tailwind</h3><span class="skills__years">1 year</span>
+          </div>
+          <div class="skills__item" data-aos="flip-left" data-aos-duration="600" data-aos-delay="250"><i
+              class="fa-brands fa-git-alt" style="color:#f34f29;"></i>
+            <h3 class="skills__titel">Git</h3><span class="skills__years">1.5 years</span>
+          </div>
+          <div class="skills__item" data-aos="flip-left" data-aos-duration="600" data-aos-delay="300"><i
+              class="fa-brands fa-python" style="color:#3776ab;"></i>
+            <h3 class="skills__titel">Python</h3><span class="skills__years">1 year</span>
+          </div>
+          <div class="skills__item" data-aos="flip-left" data-aos-duration="600" data-aos-delay="350"><i
+              class="fa-solid fa-bolt" style="color:#646CFF;"></i>
+            <h3 class="skills__titel">Vite</h3><span class="skills__years">1 year</span>
+          </div>
         </div>
-        <div class="progects__data" data-aos="fade-up-right" data-aos-duration="1200">
-          <img class="progects__img" src="./images/preview.jpg" alt="ClipboardX Modern Landing Page" />
-          <h3 class="h3-heading">ClipboardX – Modern Landing Page</h3>
-          <p class="progects__description">
-            A fully responsive landing page built with HTML5 and CSS3 using a
-            mobile-first approach. Designed with Flexbox and Grid, featuring
-            modern UI, clean layout, and interactive hover states.
-          </p>
-          <a href="https://hilarious-bubblegum-95a6272.netlify.app/" class="projects__link" target="_blank">Live Demo <i
-              class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          <a href="https://github.com/Ahmedhesham213/clipboard-landing-page-master" class="projects__link"
-            target="_blank">Repository <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
+      </section>
 
-        <div data-aos="fade-up-left" data-aos-duration="1200" class="progects__data">
-          <img class="progects__img" src="./images/3D Startup.png" alt="Quran Tab Extension" />
-          <h3 class="h3-heading">3D Startup Landing Page</h3>
-          <p class="progects__description">
-            Modern and responsive landing page built with HTML and CSS.
-            Features smooth animations with AOS and an interactive 3D model
-            using Spline.
-          </p>
-          <a href="https://3d-startup.netlify.app/" class="projects__link" target="_blank">Live Demo <i
-              class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          <a href="https://github.com/Ahmedhesham213/3D-Startup/tree/main" class="projects__link"
-            target="_blank">Repository <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
+      <!-- Projects Section -->
+      <section id="projects" class="section">
+        <h2 class="section-title" data-aos="zoom-in">Featured Projects</h2>
+        <div class="projects__grid">
+          <!-- Calculator Project (JavaScript) -->
+          <div class="project__card" data-aos="fade-up" data-aos-duration="800">
+            <div class="project__img empty-img">
+              <img class="project__img" src="/images/Calculator.png" alt="">
+            </div>
+            <div class="project__content">
+              <h3 class="project__title">Minimal JavaScript Calculator</h3>
+              <p class="project__description">A fully functional calculator built with vanilla JavaScript, HTML, and
+                CSS. Features clean UI, responsive design, and smooth arithmetic operations.</p>
+              <div class="project__links">
 
-        <div class="progects__button">
-          <a data-aos="fade-up" data-aos-duration="1000" class="projects__all" target="_blank"
-            href="https://github.com/Ahmedhesham213">All Projects<i class="fa-brands fa-github"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="clients" class="clients section section--with-bg">
-      <h2 data-aos="zoom-in-up" data-aos-duration="1000" class="h2-heading">
-        WHAT MY <br />CLIENTS SAYS
-      </h2>
-      <div class="clients__opinions">
-        <div class="clients__wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <p class="clients__icon">"</p>
-          <p class="clients__opinion">
-            Ahmed Hesham has the exceptional ability to
-            <span class="highlight">turn complex problems into clean and effective solutions</span>. His frontend skills
-            and eye for design made our project stand
-            out. I highly recommend him.
-          </p>
-        </div>
-
-        <div class="clients__wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <p class="clients__icon">"</p>
-          <p class="clients__opinion">
-            Working with Ahmed was inspiring. He always brings
-            <span class="highlight">creativity and structure at the same time</span>, which is rare to find. His
-            excellent communication and
-            commitment made the whole process smooth.
-          </p>
-        </div>
-
-        <div class="clients__wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-          <p class="clients__icon">"</p>
-          <p class="clients__opinion">
-            Ahmed is the kind of teammate who
-            <span class="highlight">lifts the whole group</span>. Always
-            willing to help, share knowledge, and learn something new. A true
-            asset to any team he joins.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact section">
-      <div class="contact__contener" data-aos="fade-right" data-aos-duration="1500">
-        <p class="contact__description">
-          Feel free to reach out to me any time. I prefer to talk over email,
-          especially since we may be a few time zones away.
-        </p>
-
-        <a class="contact__email" href="mailto:ahmed.hesham.a.ibrahim@gmail.com"
-          target="_blank">ahmed.hesham.a.ibrahim@gmail.com</a>
-        <div class="contact__socials">
-          <a href="https://www.facebook.com/ahmed.hesham.201707?locale=ar_AR" class="contact__social" target="_blank"
-            aria-label="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-
-          <a href="https://www.instagram.com/ahmed__hesham74" class="contact__social" target="_blank"
-            aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-
-          <a href="https://github.com/Ahmedhesham213" class="contact__social" target="_blank" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-
-          <a href="https://www.linkedin.com/in/ahmed-hesham74" class="contact__social" target="_blank"
-            aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-
-          <a href="https://wa.me/201274848677" class="contact__social" target="_blank" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-
-        </div>
-      </div>
-      <div class="contact__formContact" data-aos="fade-left" data-aos-duration="1500">
-        <h2 class="h2-heading">
-          Let’s Work <br />
-          Together!
-        </h2>
-
-        <form id="contact-form" method="POST">
-          <div class="contact__inputs">
-            <input class="contact__input" type="text" name="name" placeholder="Full Name" required />
-            <input class="contact__input" type="email" name="email" placeholder="Email Address" required />
+                <a href="https://minimaljscalculator.netlify.app/" class="project__link" target="_blank">Live Demo <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/Ahmedhesham213/Age-Calculator" class="project__link" target="_blank">GitHub
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
           </div>
 
-          <textarea class="contact__input contact__textarea" name="message" rows="4" placeholder="Your Message"
-            required></textarea>
-          <input class="contact__boutton" type="submit" value="Send Message" />
-          <input type="hidden" name="_replyto" value="ahmed.hesham.a.ibrahim@gmail.com">
-          <input type="hidden" name="_subject" value="New Message From Website">
-        </form>
+          <!-- Tic Tac Toe Project (JavaScript) -->
+          <div class="project__card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="project__img empty-img">
+              <img class="project__img" src="/images/x and o.png" alt="">
+            </div>
+            <div class="project__content">
+              <h3 class="project__title">Tic-Tac-Toe Game</h3>
+              <p class="project__description">Classic Tic-Tac-Toe game built with JavaScript. Features two-player mode,
+                win detection, draw handling, and smooth animations.</p>
+              <div class="project__links">
+                <a href="https://tic-tac-toejavascript.netlify.app/" class="project__link" target="_blank">Live Demo <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/Ahmedhesham213/tic-tac-toe-game" class="project__link"
+                  target="_blank">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </div>
 
-        <div id="success-message">
-          Message sent successfully ✔
+          <!-- Existing Project 1 -->
+          <div class="project__card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <img class="project__img" src="./images/suez-canal.png" alt="Suez Canal Explorer" />
+            <div class="project__content">
+              <h3 class="project__title">Suez Canal Explorer</h3>
+              <p class="project__description">Interactive website showcasing maritime route with real-time updates and
+                beautiful animations.</p>
+              <div class="project__links">
+                <a href="https://suez-canal.netlify.app/" class="project__link" target="_blank">Live Demo <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/Ahmedhesham213/suez-canal" class="project__link" target="_blank">GitHub <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Existing Project 2 -->
+          <div class="project__card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <img class="project__img" src="./images/previewVPN.jpg" alt="LaslesVPN" />
+            <div class="project__content">
+              <h3 class="project__title">LaslesVPN Landing</h3>
+              <p class="project__description">Pixel-perfect responsive landing page built with Sass and modern CSS
+                architecture.</p>
+              <div class="project__links">
+                <a href="https://laslesvpnlanding-page.netlify.app/" class="project__link" target="_blank">Live Demo <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/Ahmedhesham213/LaslesVPN-Landing-Page" class="project__link"
+                  target="_blank">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Existing Project 3 -->
+          <div class="project__card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <img class="project__img" src="./images/3D Startup.png" alt="3D Startup" />
+            <div class="project__content">
+              <h3 class="project__title">3D Startup Landing</h3>
+              <p class="project__description">Modern landing with 3D integration using Spline and smooth AOS animations.
+              </p>
+              <div class="project__links">
+                <a href="https://3d-startup.netlify.app/" class="project__link" target="_blank">Live Demo <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/Ahmedhesham213/3D-Startup" class="project__link" target="_blank">GitHub <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Existing Project 4 (ClipboardX) -->
+          <div class="project__card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+            <img class="project__img" src="./images/preview.jpg" alt="ClipboardX" />
+            <div class="project__content">
+              <h3 class="project__title">ClipboardX Landing Page</h3>
+              <p class="project__description">Fully responsive landing page with mobile-first approach, Flexbox, Grid,
+                and modern UI design.</p>
+              <div class="project__links">
+                <a href="https://hilarious-bubblegum-95a6272.netlify.app/" class="project__link" target="_blank">Live
+                  Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/Ahmedhesham213/clipboard-landing-page-master" class="project__link"
+                  target="_blank">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
+        <div style="text-align: center; margin-top: 4rem;" data-aos="fade-up">
+          <a href="https://github.com/Ahmedhesham213" class="btn btn-primary" target="_blank">All Projects <i
+              class="fa-brands fa-github"></i></a>
+        </div>
+      </section>
 
-      </div>
-    </section>
+      <!-- Clients Section -->
+      <section id="clients" class="section section--alt">
+        <h2 class="section-title" data-aos="zoom-in">What Clients Say</h2>
+        <div class="clients__grid">
+          <div class="client__card" data-aos="fade-right" data-aos-duration="800">
+            <div class="client__icon">“</div>
+            <p class="client__text">Ahmed has the exceptional ability to <span class="highlight">turn complex problems
+                into clean solutions</span>. His frontend skills made our project stand out.</p>
+          </div>
+          <div class="client__card" data-aos="fade-up" data-aos-duration="800">
+            <div class="client__icon">“</div>
+            <p class="client__text">Working with Ahmed was inspiring. He brings <span class="highlight">creativity and
+                structure together</span>. Excellent communication and commitment.</p>
+          </div>
+          <div class="client__card" data-aos="fade-left" data-aos-duration="800">
+            <div class="client__icon">“</div>
+            <p class="client__text">Ahmed is the kind of teammate who <span class="highlight">lifts the whole
+                group</span>. Always willing to help and share knowledge.</p>
+          </div>
+        </div>
+      </section>
 
-    <footer class="footer" data-aos="fade-in" data-aos-duration="500">
-      ©2024 by Ahmed Hesham.
-    </footer>
-  </div>
+      <!-- Contact Section -->
+      <section id="contact" class="section">
+        <div class="contact__grid">
+          <div data-aos="fade-right" data-aos-duration="1000">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Let's Connect</h2>
+            <p>Feel free to reach out anytime. I love discussing new projects and creative ideas.</p>
+            <a href="mailto:ahmed.hesham.a.ibrahim@gmail.com"
+              class="contact__email">ahmed.hesham.a.ibrahim@gmail.com</a>
+            <div class="contact__socials">
+              <a href="https://github.com/Ahmedhesham213" class="contact__social" target="_blank"><i
+                  class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/ahmed-hesham74" class="contact__social" target="_blank"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://wa.me/201274848677" class="contact__social" target="_blank"><i
+                  class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://www.instagram.com/ahmed__hesham74" class="contact__social" target="_blank"><i
+                  class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="1000">
+            <form id="contact-form" method="POST">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Full Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Email Address" required />
+              </div>
+              <div class="form-group">
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit" class="btn-submit">Send Message →</button>
+              <div id="success-message">Message sent successfully ✔</div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Ahmed Hesham. Crafted with passion.</p>
+  </footer>
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      once: true,
-    });
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="form.js"></script>
+  <script src="/scripts/script.js"></script>
+  <script src="/scripts/form.js"></script>
 </body>
 
 </html>
