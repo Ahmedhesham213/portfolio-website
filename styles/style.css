@@ -803,6 +803,23 @@ body {
   .burger-menu {
     display: flex;
   }
+  /* Burger menu X animation */
+  .header:has(.burgr-menu__checkbox:checked)
+    .burger-menu
+    .burgr-menu__bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  .header:has(.burgr-menu__checkbox:checked)
+    .burger-menu
+    .burgr-menu__bar:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header:has(.burgr-menu__checkbox:checked)
+    .burger-menu
+    .burgr-menu__bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
   /* Hide desktop theme toggle */
   .desktop-theme {
     display: none !important;
@@ -903,7 +920,7 @@ body {
     font-size: 3.5rem;
   }
   .logo-name {
-    font-size: 2.7rem;
+    font-size: 2rem;
   }
   .logo-icon {
     width: 4rem;
@@ -911,7 +928,7 @@ body {
     font-size: 3.7rem;
   }
   .logo-icon:hover {
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
   .animation-wrapper {
     width: 220px;
