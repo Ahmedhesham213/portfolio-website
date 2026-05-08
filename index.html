@@ -46,10 +46,12 @@
         </ul>
       </nav>
 
+
       <div class="theme-toggle">
         <input type="checkbox" id="themeToggle" class="theme-toggle__checkbox" />
         <label for="themeToggle" class="theme-toggle__label"></label>
       </div>
+
     </div>
   </header>
 
@@ -60,8 +62,8 @@
         <div class="bio">
           <div data-aos="fade-right" data-aos-duration="1000">
             <h1 class="bio__heading">
-              Hi There, I'm 
-              <span class="name typing-text"></span>
+              Hi There, I'm
+              <span class="name typing-text typing"></span>
             </h1>
             <p class="bio__objective">I craft engaging and responsive web experiences with modern technologies.
               Passionate about clean code and beautiful design. Find me on <a href="https://github.com/Ahmedhesham213"
@@ -73,8 +75,14 @@
               <a href="./assets/MyCV.pdf" class="btn btn-outline">Download CV ↓</a>
             </div>
           </div>
-          <div data-aos="fade-left" data-aos-duration="1000">
-            <img class="bio__pic" src="./images/photo.png" alt="Ahmed Hesham" />
+          <div class="bio-container" data-aos="zoom-in">
+            <div class="animation-wrapper">
+              <div class="moving-circle blue-circle"></div>
+              <div class="moving-circle purple-circle"></div>
+              <div class="image-frame">
+                <img src="./images/photo.png" alt="Ahmed Hesham" class="main-photo">
+              </div>
+            </div>
           </div>
         </div>
       </section>
