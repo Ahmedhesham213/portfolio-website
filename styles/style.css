@@ -903,15 +903,15 @@ body {
     font-size: 3.5rem;
   }
   .logo-name {
-    font-size: 3.5rem;
+    font-size: 2.7rem;
   }
   .logo-icon {
-    width: 5rem;
-    height: 5rem;
-    font-size: 5rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 3.7rem;
   }
   .logo-icon:hover {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
   }
   .animation-wrapper {
     width: 220px;
