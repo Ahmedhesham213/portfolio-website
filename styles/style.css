@@ -153,7 +153,7 @@ body {
 .logo-name {
   font-size: 3.4rem;
   font-weight: bold;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   white-space: nowrap;
   font-family: "Source Serif 4", serif;
 }
@@ -920,7 +920,7 @@ body {
     font-size: 3.5rem;
   }
   .logo-name {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   .logo-icon {
     width: 4rem;
