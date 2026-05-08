@@ -124,8 +124,8 @@ body {
   margin-right: auto;
 }
 .logo-icon {
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 4.8rem;
+  height: 4.8rem;
   border-radius: 1rem;
   background: linear-gradient(
     135deg,
@@ -133,7 +133,7 @@ body {
     var(--color-primary-dark)
   );
   color: #fff;
-  font-size: 3.9rem;
+  font-size: 5.3rem;
   font-weight: 300;
   font-family: "Inter", sans-serif;
   display: flex;
@@ -148,10 +148,10 @@ body {
     var(--color-primary-dark),
     var(--color-primary)
   );
-  font-size: 4.5rem;
+  font-size: 5.7rem;
 }
 .logo-name {
-  font-size: 3rem;
+  font-size: 3.4rem;
   font-weight: bold;
   color: var(--color-primary);
   white-space: nowrap;
@@ -829,8 +829,8 @@ body {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 80%;
-    max-width: 32rem;
+    width: 90%;
+    max-width: 34rem;
     height: 70vh;
     background: var(--color-bg);
     border-right: 1px solid var(--color-border);
@@ -920,7 +920,7 @@ body {
     font-size: 3.5rem;
   }
   .logo-name {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .logo-icon {
     width: 4rem;
