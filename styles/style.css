@@ -273,6 +273,7 @@ html {
   gap: 5rem;
   align-items: center;
   min-height: 80vh;
+  margin-top: 6rem;
 }
 
 .bio__heading {
@@ -283,14 +284,11 @@ html {
 }
 
 .bio__heading span {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary),
-    var(--color-secondary)
-  );
+  background: linear-gradient(135deg, #4f46e5, #818cf8);
+
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .bio__objective {
@@ -652,6 +650,13 @@ html {
   color: var(--color-primary);
   text-decoration: none;
   margin-bottom: 2rem;
+  transition: all 0.4s ease;
+}
+
+.contact__email:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+  opacity: 0.85;
 }
 
 .contact__socials {

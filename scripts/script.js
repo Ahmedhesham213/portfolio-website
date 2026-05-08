@@ -77,3 +77,42 @@ function updateActiveLink() {
 
 window.addEventListener("scroll", updateActiveLink);
 window.addEventListener("load", updateActiveLink);
+
+const texts = [
+  "Ahmed Hesham",
+  "Front-End Developer",
+];
+
+const typingText = document.querySelector(".typing-text");
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+  const currentText = texts[textIndex];
+
+  if (!isDeleting) {
+    typingText.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentText.length) {
+      isDeleting = true;
+
+      setTimeout(typeEffect, 1500);
+      return;
+    }
+  } else {
+    typingText.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+    }
+  }
+
+  setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+typeEffect();
