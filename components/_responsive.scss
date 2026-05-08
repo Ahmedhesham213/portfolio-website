@@ -56,11 +56,26 @@
   .header::before {
     z-index: 0;
   }
+  .header__inner {
+    flex-direction: row;
+  }
+  .logo-link {
+    position: static;
+    transform: none;
+    margin-left: auto;
+  }
+  .desktop-theme {
+    display: none;
+  }
+  .nav-theme-toggle {
+    display: flex;
+  }
   .bio__pic {
     width: 100%;
   }
   .navigation {
     display: none;
+    margin-left: 0;
   }
   .skills__list {
     grid-template-columns: repeat(2, 140px);
@@ -87,7 +102,7 @@
     flex-direction: column;
     cursor: pointer;
     gap: 0.75rem;
-    z-index: 0;
+    z-index: 3;
     align-self: center;
   }
   .burgr-menu__bar {
@@ -106,37 +121,44 @@
   .header:has(.burgr-menu__checkbox:checked) .burgr-menu__bar:nth-child(3) {
     transform: translateY(-7px) rotate(-40deg);
   }
-  .burger-menu__checkbox:checked + .navigation {
+  .burgr-menu__checkbox:checked + .navigation {
     top: 0;
+    max-height: 100vh;
   }
   .navigation {
-    position: absolute;
+    position: fixed;
     width: 100vw;
+    height: 100vh;
     background-color: var(--color-background);
-    top: 100%;
+    top: -100vh;
+    left: 0;
     border-block: 0.1rem solid var(--color-text);
-    z-index: 1;
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    padding-bottom: 0;
-    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out,
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 8rem;
+    overflow-y: auto;
+    transition:
+      top 0.3s ease-in-out,
       background-color var(--transition-timing);
   }
   .navigation__list {
     justify-content: center;
+    flex-direction: column;
+    width: 100%;
   }
   .header:has(.burgr-menu__checkbox:checked) .navigation {
-    display: block;
-    max-height: 50rem;
-    padding: 2rem 0;
+    display: flex;
   }
   .navigation__link {
     font-size: var(--font-size-18);
     font-weight: var(--font-weight-semi-bold);
-    padding: 1rem 0;
+    padding: 1.5rem 2rem;
     text-align: center;
     width: 100%;
+    display: block;
   }
   .navigation__link:hover {
     color: var(--color-blue);

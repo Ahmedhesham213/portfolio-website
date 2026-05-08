@@ -1,49 +1,28 @@
+// ── Contact Form ──────────────────────────────
 const form = document.getElementById("contact-form");
-const successMessage = document.getElementById("success-message");
+const successMsg = document.getElementById("success-message");
 
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  const data = Object.fromEntries(new FormData(form));
 
-  // Get the submit button and disable it
-  const submitBtn = form.querySelector(".btn-submit");
-  const originalText = submitBtn.textContent;
-  submitBtn.disabled = true;
-  submitBtn.textContent = "جاري الإرسال...";
-
-  const formData = new FormData(form);
-
-  fetch("https://formspree.io/f/mojlgzvl", {
-    method: "POST",
-    body: formData,
-    headers: { Accept: "application/json" },
-  })
-    .then((response) => {
-      if (response.ok) {
-        // Show success message with animation
-        successMessage.style.display = "block";
-        successMessage.style.animation = "slideIn 0.5s ease-out";
-
-        // Reset form
-        form.reset();
-
-        // Hide message after 4 seconds
-        setTimeout(() => {
-          successMessage.style.display = "none";
-        }, 4000);
-      } else {
-        throw new Error("Server error");
-      }
-    })
-    .catch((error) => {
-      console.error("Form error:", error);
-      alert(
-        "حدث خطأ في الإرسال. تحقق من بيانات البريد الإلكتروني وحاول مرة أخرى.",
-      );
-      successMessage.style.display = "none";
-    })
-    .finally(() => {
-      // Re-enable the button
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
+  try {
+    const res = await fetch("https://formspree.io/f/mojlgzvl", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
     });
+
+    if (res.ok) {
+      successMsg.style.display = "block";
+      form.reset();
+      setTimeout(() => {
+        successMsg.style.display = "none";
+      }, 3000);
+    } else {
+      throw new Error();
+    }
+  } catch {
+    alert("Error sending message. Please try again or email directly.");
+  }
 });

@@ -1,76 +1,65 @@
+// ── AOS ───────────────────────────────────────
 AOS.init({ once: true, duration: 800 });
 
-// Theme Toggle
-const themeToggle = document.getElementById("themeToggle");
-const root = document.documentElement;
+// ── Theme ─────────────────────────────────────
+const desktopToggle = document.getElementById("themeToggle");
+const mobileToggle = document.getElementById("themeToggleMobile");
 
-if (localStorage.getItem("theme") === "dark") {
-  root.setAttribute("data-theme", "dark");
-  themeToggle.checked = true;
+function applyTheme(dark) {
+  document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+  if (desktopToggle) desktopToggle.checked = dark;
+  if (mobileToggle) mobileToggle.checked = dark;
+  localStorage.setItem("theme", dark ? "dark" : "light");
 }
 
-themeToggle.addEventListener("change", () => {
-  if (themeToggle.checked) {
-    root.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark");
-  } else {
-    root.removeAttribute("data-theme");
-    localStorage.setItem("theme", "light");
-  }
-});
+if (desktopToggle)
+  desktopToggle.addEventListener("change", () =>
+    applyTheme(desktopToggle.checked),
+  );
+if (mobileToggle)
+  mobileToggle.addEventListener("change", () =>
+    applyTheme(mobileToggle.checked),
+  );
 
-// Form Handler
-const form = document.getElementById("contact-form");
-const successMsg = document.getElementById("success-message");
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) applyTheme(savedTheme === "dark");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData);
-
-  try {
-    const response = await fetch("https://formspree.io/f/mojlgzvl", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    if (response.ok) {
-      successMsg.style.display = "block";
-      form.reset();
-      setTimeout(() => (successMsg.style.display = "none"), 3000);
-    } else {
-      throw new Error("Form submission failed");
-    }
-  } catch (error) {
-    alert("Error sending message. Please try again or email directly.");
-  }
-});
-
-// Active Navigation Link on Scroll
-const sections = document.querySelectorAll("section");
+// ── Mobile Drawer ─────────────────────────────
+const menuCheckbox = document.getElementById("menu");
+const overlay = document.getElementById("nav-overlay");
 const navLinks = document.querySelectorAll(".navigation__link");
+
+if (overlay)
+  overlay.addEventListener("click", () => {
+    menuCheckbox.checked = false;
+  });
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuCheckbox.checked = false;
+  });
+});
+
+// ── Active Nav Link on Scroll ─────────────────
+const sections = document.querySelectorAll("section[id]");
 
 function updateActiveLink() {
   let current = "";
-  const scrollPosition = window.scrollY + 150;
+  const scrollY = window.scrollY + 150;
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-
     if (
-      scrollPosition >= sectionTop &&
-      scrollPosition < sectionTop + sectionHeight
+      scrollY >= section.offsetTop &&
+      scrollY < section.offsetTop + section.clientHeight
     ) {
       current = section.getAttribute("id");
     }
   });
 
   navLinks.forEach((link) => {
-    link.classList.remove("active");
-    const href = link.getAttribute("href");
-    if (href && href.substring(1) === current) {
-      link.classList.add("active");
+    link.classList.remove("active-link");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active-link");
     }
   });
 }
@@ -78,37 +67,27 @@ function updateActiveLink() {
 window.addEventListener("scroll", updateActiveLink);
 window.addEventListener("load", updateActiveLink);
 
-const texts = [
-  " Ahmed Hesham",
-  "Front-End Developer",
-];
-
-const typingElement = document.querySelector(".typing");
-
-let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+// ── Typing Effect ─────────────────────────────
+const texts = [" Ahmed Hesham", "Front-End Developer"];
+const typingEl = document.querySelector(".typing");
+let textIndex = 0,
+  charIndex = 0,
+  isDeleting = false;
 
 function typeEffect() {
-  const currentText = texts[textIndex];
+  const current = texts[textIndex];
+  typingEl.textContent = current.substring(
+    0,
+    isDeleting ? --charIndex : ++charIndex,
+  );
 
-  if (!isDeleting) {
-    typingElement.textContent = currentText.substring(0, charIndex + 1);
-    charIndex++;
-
-    if (charIndex === currentText.length) {
-      isDeleting = true;
-      setTimeout(typeEffect, 1500);
-      return;
-    }
-  } else {
-    typingElement.textContent = currentText.substring(0, charIndex - 1);
-    charIndex--;
-
-    if (charIndex === 0) {
-      isDeleting = false;
-      textIndex = (textIndex + 1) % texts.length;
-    }
+  if (!isDeleting && charIndex === current.length) {
+    isDeleting = true;
+    return setTimeout(typeEffect, 1500);
+  }
+  if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    textIndex = (textIndex + 1) % texts.length;
   }
 
   setTimeout(typeEffect, isDeleting ? 50 : 100);

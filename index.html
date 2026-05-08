@@ -24,36 +24,55 @@
     <source src="/Video/video-loop.mp4" type="video/mp4" />
   </video>
 
-  <header class="header">
-    <div class="header__inner">
-      <div class="header-left">
-        <label class="burger-menu" for="menu">
-          <div class="burgr-menu__bar"></div>
-          <div class="burgr-menu__bar"></div>
-          <div class="burgr-menu__bar"></div>
-        </label>
+<header class="header">
+  <div class="header__inner">
+    <a href="#bio" class="logo-link">
+      <div class="logo-icon">A</div>
+      <span class="logo-name">Ahmed Hesham</span>
+    </a>
+
+    <!-- Burger for mobile (visible only on mobile per CSS) -->
+    <label class="burger-menu" for="menu" id="burger-label">
+      <div class="burgr-menu__bar"></div>
+      <div class="burgr-menu__bar"></div>
+      <div class="burgr-menu__bar"></div>
+    </label>
+
+    <input id="menu" class="burgr-menu__checkbox" type="checkbox" />
+
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Navigation (desktop + mobile drawer) -->
+    <nav class="navigation" id="nav-drawer">
+      <div class="drawer-header">
+        <a href="#bio" class="logo-link">
+          <div class="logo-icon">A</div>
+          <span class="logo-name">Ahmed Hesham</span>
+        </a>
+        <label for="menu" class="drawer-close">&times;</label>
       </div>
 
-      <input id="menu" class="burgr-menu__checkbox" type="checkbox" />
+      <ul class="navigation__list">
+        <li><a href="#bio" class="navigation__link active-link">Home</a></li>
+        <li><a href="#skills" class="navigation__link">Skills</a></li>
+        <li><a href="#projects" class="navigation__link">Projects</a></li>
+        <li><a href="#clients" class="navigation__link">Clients</a></li>
+        <li><a href="#contact" class="navigation__link">Contact</a></li>
+      </ul>
 
-      <nav class="navigation">
-        <ul class="navigation__list">
-          <li><a href="#bio" class="navigation__link" data-aos="fade-down">Home</a></li>
-          <li><a href="#skills" class="navigation__link" data-aos="fade-down" data-aos-delay="100">Skills</a></li>
-          <li><a href="#projects" class="navigation__link" data-aos="fade-down" data-aos-delay="200">Projects</a></li>
-          <li><a href="#clients" class="navigation__link" data-aos="fade-down" data-aos-delay="300">Clients</a></li>
-          <li><a href="#contact" class="navigation__link" data-aos="fade-down" data-aos-delay="400">Contact</a></li>
-        </ul>
-      </nav>
-
-
-      <div class="theme-toggle">
-        <input type="checkbox" id="themeToggle" class="theme-toggle__checkbox" />
-        <label for="themeToggle" class="theme-toggle__label"></label>
+      <div class="drawer-footer">
+        <input type="checkbox" id="themeToggleMobile" class="theme-toggle__checkbox" />
+        <label for="themeToggleMobile" class="theme-toggle__label"></label>
       </div>
+    </nav>
 
+    <!-- Theme toggle desktop only (hidden on mobile via desktop-theme class) -->
+    <div class="theme-toggle desktop-theme">
+      <input type="checkbox" id="themeToggle" class="theme-toggle__checkbox" />
+      <label for="themeToggle" class="theme-toggle__label"></label>
     </div>
-  </header>
+  </div>
+</header>
 
   <main>
     <div class="container">
@@ -65,11 +84,19 @@
               Hi There, I'm
               <span class="name typing-text typing"></span>
             </h1>
-            <p class="bio__objective">I craft engaging and responsive web experiences with modern technologies.
-              Passionate about clean code and beautiful design. Find me on <a href="https://github.com/Ahmedhesham213"
-                target="_blank" style="color: var(--color-primary)">GitHub</a> and <a
-                href="https://www.linkedin.com/in/ahmed-hesham74" target="_blank"
-                style="color: var(--color-primary)">LinkedIn</a>.</p>
+            <p class="bio__objective">
+              I design and build modern front-end web applications with React — from pixel-perfect UI/UX to
+              responsive and
+              interactive user experiences.
+
+              <a href="https://github.com/Ahmedhesham213" target="_blank" style="color: var(--color-primary)">
+                GitHub
+              </a>
+              &
+              <a href="https://www.linkedin.com/in/ahmed-hesham74" target="_blank" style="color: var(--color-primary)">
+                LinkedIn
+              </a>.
+            </p>
             <div class="bio__links-group">
               <a href="#contact" class="btn btn-primary">Say Hi 👋</a>
               <a href="./assets/MyCV.pdf" class="btn btn-outline">Download CV ↓</a>
