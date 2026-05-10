@@ -897,6 +897,7 @@ body {
   .theme-toggle__label {
     width: 6rem;
     height: 3.2rem;
+    margin-left: auto;
   }
   .theme-toggle__label::after {
     width: 2.8rem;
