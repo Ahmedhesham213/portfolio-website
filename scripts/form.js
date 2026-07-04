@@ -1,28 +1,29 @@
-// ── Contact Form ──────────────────────────────
 const form = document.getElementById("contact-form");
-const successMsg = document.getElementById("success-message");
+const successMessage = document.getElementById("success-message");
 
-form.addEventListener("submit", async (e) => {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
-  const data = Object.fromEntries(new FormData(form));
 
-  try {
-    const res = await fetch("https://formspree.io/f/mojlgzvl", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+  const formData = new FormData(form);
+
+  fetch("https://formspree.io/f/mojlgzvl", {
+    method: "POST",
+    body: formData,
+    headers: { Accept: "application/json" },
+  })
+    .then((response) => {
+      if (response.ok) {
+        successMessage.style.display = "block";
+        form.reset();
+
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 3000);
+      } else {
+        alert("Something went wrong, please try again.");
+      }
+    })
+    .catch(() => {
+      alert("Something went wrong, please try again.");
     });
-
-    if (res.ok) {
-      successMsg.style.display = "block";
-      form.reset();
-      setTimeout(() => {
-        successMsg.style.display = "none";
-      }, 3000);
-    } else {
-      throw new Error();
-    }
-  } catch {
-    alert("Error sending message. Please try again or email directly.");
-  }
 });
