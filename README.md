@@ -33,6 +33,8 @@ Throughout this project, I learned how to create a fully responsive layout using
 
 🔹**CSS3**
 
+🔹**javascript**
+
 🔹**Sass (SCSS)**
 
 🔹**Responsive Design**
